@@ -45,6 +45,28 @@ nav a {
   font-weight: 700;
 }
 
+/* Back to Home Button */
+.back-to-home {
+  background-color: #8a2387;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 25px;
+  position: fixed;
+  z-index: 999;
+}
+
+.back-to-home.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.back-to-home.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
 /* Hero */
 .hero {
   background-image: url('images/hero-bg.jpg');
@@ -362,4 +384,3 @@ body.dark nav a, body.dark .logo, body.dark .consult-btn {
     grid-template-columns: 1fr;
   }
 }
-
