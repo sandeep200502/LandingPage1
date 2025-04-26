@@ -200,6 +200,11 @@ nav a {
   text-align: center;
 }
 
+.page-banner .banner-content h1,
+.page-banner .banner-content p {
+  color: black !important;
+}
+
 .banner-content h1 {
   font-size: 3rem;
   margin-bottom: 10px;
