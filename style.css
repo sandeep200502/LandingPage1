@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -5,15 +6,23 @@ body {
   color: #333;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   background: linear-gradient(90deg, #f27121, #e94057, #8a2387);
   padding: 15px;
 }
 
-.nav-container {
+.nav-container, nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -25,11 +34,10 @@ header {
 nav a {
   color: #fff;
   margin: 0 12px;
-  text-decoration: none;
   font-weight: 500;
 }
 
-.consult-btn {
+.consult-btn, .buy-button {
   background: #fff;
   color: #8a2387;
   padding: 8px 16px;
@@ -37,6 +45,7 @@ nav a {
   font-weight: 700;
 }
 
+/* Hero */
 .hero {
   background-image: url('images/hero-bg.jpg');
   background-size: cover;
@@ -49,7 +58,7 @@ nav a {
 }
 
 .hero-text {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 12px;
 }
@@ -73,17 +82,22 @@ nav a {
   font-weight: 700;
 }
 
+/* Features */
 .features {
   display: flex;
   justify-content: space-around;
   padding: 50px 20px;
   background: #fff;
+  flex-wrap: wrap;
 }
 
 .feature {
   text-align: center;
+  flex: 1 1 30%;
+  margin: 20px;
 }
 
+/* About */
 .about {
   text-align: center;
   padding: 40px;
@@ -96,6 +110,7 @@ nav a {
   border-radius: 10px;
 }
 
+/* Services Landing Page */
 .services {
   text-align: center;
   padding: 50px 20px;
@@ -105,10 +120,12 @@ nav a {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
   width: 30%;
+  margin: 20px 10px;
 }
 
 .card img {
@@ -116,6 +133,112 @@ nav a {
   border-radius: 10px;
 }
 
+/* Services Page */
+.page-banner {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+}
+
+.services-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Blog Page */
+.blog-hero {
+  background: url('images/blog-hero.jpg') center/cover no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.blog-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.blog-posts {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.post {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.post img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.post-content {
+  flex: 1;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
   background: #333;
   color: #aaa;
@@ -123,6 +246,7 @@ footer {
   padding: 20px;
 }
 
+/* Forms & Admin */
 .form-container, .admin-container, .page-container, .success-message {
   margin: 50px auto;
   width: 90%;
@@ -140,6 +264,12 @@ input, textarea {
 
 button {
   margin-top: 20px;
+  background: #8a2387;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 /* Animations */
@@ -153,6 +283,8 @@ button {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* AOS animations are handled by the library */
 
 /* Loader Spinner */
 .loader {
@@ -201,41 +333,28 @@ body.dark nav a, body.dark .logo, body.dark .consult-btn {
   cursor: pointer;
 }
 
-.blog-hero {
-  background: url('images/blog-hero.jpg') center/cover no-repeat;
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
-.blog-hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-.blog-posts {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-.post {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
-}
-.post img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-}
-.post-content {
-  flex: 1;
-}
-.read-more {
-  display: inline-block;
-  margin-top: 10px;
-  color: #007bff;
-  text-decoration: none;
-}
-.read-more:hover {
-  text-decoration: underline;
+/* Responsive */
+@media (max-width: 768px) {
+  .features, .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .post {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card, .service-card {
+    width: 90%;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
 }
