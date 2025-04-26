@@ -458,10 +458,10 @@ body.consult-page .back-to-home:hover {
 
 body.consult-page .form-container {
   background: #fff;
-  padding: 40px 30px;
+  padding: 40px 40px; /* increased horizontal padding */
   border-radius: 16px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
+  max-width: 600px; /* was 500px, increased width */
   width: 100%;
   text-align: center;
   color: #333;
