@@ -1,65 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services - MySite</title>
-  <link href="style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Fonts and Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
 
-<header>
-  <nav>
-    <div class="logo">MySite</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="buy.html" class="buy-button">Buy Now</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Header -->
+  <header>
+    <nav class="nav-container">
+      <div class="logo">MySite</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="buy.html" class="buy-button">Buy Now</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="page-banner" style="background-image: url('images/service1.jpg');">
-  <div class="banner-content" data-aos="zoom-in">
-    <h1>Our Services</h1>
-    <p>We deliver excellence at every step!</p>
-  </div>
-</section>
-
-<section class="services-section">
-  <div class="container">
-    <div class="service-card" data-aos="fade-up">
-      <img src="images/user-experience.jpg" alt="Service 1">
-      <h3>UI/UX Design</h3>
-      <p>Crafting beautiful, intuitive interfaces that users love.</p>
+  <!-- Page Banner -->
+  <section class="page-banner" style="background-image: url('images/service1.jpg');">
+    <div class="banner-content" data-aos="zoom-in">
+      <h1>Our Services</h1>
+      <p>We deliver excellence at every step.</p>
     </div>
-    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-      <img src="images/creative-design.jpg" alt="Service 2">
-      <h3>Creative Solutions</h3>
-      <p>Unique, innovative designs tailored to your brand identity.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">What We Offer</h2>
+      <div class="service-grid">
+        <div class="service-card" data-aos="fade-up">
+          <img src="images/user-experience.jpg" alt="UI/UX Design">
+          <h3>UI/UX Design</h3>
+          <p>Crafting beautiful, intuitive interfaces that users love.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/creative-design.jpg" alt="Creative Solutions">
+          <h3>Creative Solutions</h3>
+          <p>Innovative ideas tailored to your brand identity and mission.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/retina-ready.jpg" alt="High-Res Output">
+          <h3>High-Res Output</h3>
+          <p>Crystal-clear visuals optimized for all screen sizes and devices.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="images/support.jpeg" alt="24/7 Support">
+          <h3>24/7 Support</h3>
+          <p>Round-the-clock expert assistance to help you succeed anytime.</p>
+        </div>
+      </div>
     </div>
-    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-      <img src="images/retina-ready.jpg" alt="Service 3">
-      <h3>High-Resolution Output</h3>
-      <p>Delivering crystal-clear visuals across all devices.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© 2025 MySite. All rights reserved.</p>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MySite. All rights reserved.</p>
+  </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="script.js"></script>
-<script>
-  AOS.init();
-</script>
-
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
