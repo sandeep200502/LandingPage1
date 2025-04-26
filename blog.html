@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Blog</title>
 
+  <!-- Fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">Landing Page</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="buy.html">Buy Now</a>
+        <a href="consult.html" class="consult-btn">Request a Consult</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Hero Section -->
+  <section class="blog-hero" data-aos="fade-in" style="background: url('images/blog-hero.jpeg') center/cover no-repeat;">
+    <div class="blog-hero-text">
+      <h1>Latest Insights from Our Team</h1>
+      <p>Stay up to date with digital trends, design tips, and business strategies.</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="blog-posts">
+    <div class="post" data-aos="fade-up">
+      <img src="images/blog1.jpg" alt="Trends in Digital Marketing" />
+      <div class="post-content">
+        <h2>Top 5 Digital Marketing Trends to Watch in 2025</h2>
+        <p>As technology evolves, so do the strategies to engage audiences. Discover the trends that will dominate this year, including AI-driven content, personalization at scale, and more.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="post" data-aos="fade-up" data-aos-delay="100">
+      <img src="images/blog2.jpg" alt="Creative Web Design" />
+      <div class="post-content">
+        <h2>Creative Web Design: What Works in 2025?</h2>
+        <p>Design is more than aesthetics—it's about functionality, speed, and accessibility. Explore what modern users expect from a high-converting website and how you can deliver it.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="post" data-aos="fade-up" data-aos-delay="200">
+      <img src="images/blog3.jpg" alt="Startup Strategies" />
+      <div class="post-content">
+        <h2>Startup Success: 10 Strategies You Shouldn't Ignore</h2>
+        <p>From MVPs to user feedback, these tried-and-true strategies can give your startup the edge it needs in a competitive landscape. Real tips from real founders.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Landing Page. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS Scroll Animation -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
