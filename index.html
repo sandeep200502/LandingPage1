@@ -1,74 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Landing Page</title>
-    <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Page</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Library CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <div class="logo">MySite</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="buy.html" class="buy-button">Buy Now</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section class="hero" style="background-image: url('images/hero-bg.jpg');">
-    <div class="hero-content" data-aos="fade-up">
-        <h1>Welcome to Our Amazing Site!</h1>
-        <p>Creative solutions for your needs.</p>
-        <a href="contact.html" class="btn">Request a Consult</a>
+  <header>
+    <div class="nav-container">
+      <div class="logo">Landing Page</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="buy.html">Buy Now</a>
+        <a href="consult.html" class="consult-btn">Request a Consult</a>
+      </nav>
     </div>
-</section>
+  </header>
 
-<section class="about" data-aos="fade-up">
-    <div class="container">
-        <img src="images/about.jpg" alt="About Us">
-        <div class="about-text">
-            <h2>About Us</h2>
-            <p>We bring creativity and professionalism together to deliver outstanding results. Join us on this journey!</p>
-        </div>
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-text">
+      <h1>Creative Digital Agency</h1>
+      <p>We create stunning digital experiences for companies of all sizes.</p>
+      <a href="consult.html" class="btn-primary">Request a Consult</a>
     </div>
-</section>
+  </section>
 
-<section class="features">
+  <section class="features">
     <div class="feature" data-aos="fade-right">
-        <img src="images/user-experience.jpg" alt="User Experience">
-        <h3>Best User Experience</h3>
-        <p>Intuitive, clean, and efficient interfaces designed for users.</p>
+      <h3>Launch Business</h3>
+      <p>We help you launch faster and better.</p>
+    </div>
+    <div class="feature" data-aos="fade-up">
+      <h3>Online Support Team</h3>
+      <p>24/7 support to keep you running smooth.</p>
     </div>
     <div class="feature" data-aos="fade-left">
+      <h3>Time Management</h3>
+      <p>Efficient solutions saving your time.</p>
+    </div>
+  </section>
+
+  <section class="about" data-aos="zoom-in">
+    <h2>About Us</h2>
+    <p>15 years, passionate about achieving better results for our clients.</p>
+    <img src="images/about.jpg" alt="About Us">
+  </section>
+
+  <section class="services" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card" data-aos="flip-left">
+        <img src="images/user-experience.jpg" alt="User Experience">
+        <h4>User Experience</h4>
+      </div>
+      <div class="card" data-aos="flip-up">
         <img src="images/creative-design.jpg" alt="Creative Design">
-        <h3>Creative Designs</h3>
-        <p>Modern, visually appealing designs crafted with passion.</p>
-    </div>
-    <div class="feature" data-aos="fade-right">
+        <h4>Creative Design</h4>
+      </div>
+      <div class="card" data-aos="flip-right">
         <img src="images/retina-ready.jpg" alt="Retina Ready">
-        <h3>Retina Ready</h3>
-        <p>High-resolution experiences for every device and screen.</p>
+        <h4>Retina Ready</h4>
+      </div>
     </div>
-</section>
+  </section>
 
-<footer>
-    <p>© 2025 MySite. All rights reserved.</p>
-</footer>
+  <footer>
+    <p>&copy; 2025 Landing Page. All rights reserved.</p>
+  </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="script.js"></script>
-<script>
-    AOS.init();
-</script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+
+  <!-- AOS Library JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 
 </body>
 </html>
