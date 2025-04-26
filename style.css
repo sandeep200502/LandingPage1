@@ -428,12 +428,11 @@ body.dark nav a, body.dark .logo, body.dark .consult-btn {
 
 /* Consultation Page Styles */
 body.consult-page {
-  background: linear-gradient(to right, #f27121, #e94057, #8a2387);
-  color: #fff;
+  background: linear-gradient(to right, #f8f9fa, #e0e0e0);
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
   padding: 40px 20px;
   position: relative;
 }
@@ -458,13 +457,15 @@ body.consult-page .back-to-home:hover {
 
 body.consult-page .form-container {
   background: #fff;
-  padding: 40px 40px; /* increased horizontal padding */
+  padding: 40px 50px;
   border-radius: 16px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  max-width: 600px; /* was 500px, increased width */
-  width: 100%;
+  max-width: 700px; /* Wider box */
+  width: 90%;
+  margin: 80px auto; /* Adds top margin */
   text-align: center;
   color: #333;
+  box-sizing: border-box;
 }
 
 body.consult-page .form-container h2 {
