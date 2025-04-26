@@ -425,3 +425,92 @@ body.dark nav a, body.dark .logo, body.dark .consult-btn {
     grid-template-columns: 1fr;
   }
 }
+
+/* Consultation Page Styles */
+body.consult-page {
+  background: linear-gradient(to right, #f27121, #e94057, #8a2387);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+body.consult-page .back-to-home {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #fff;
+  color: #8a2387;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.consult-page .back-to-home:hover {
+  background: #f3f3f3;
+}
+
+body.consult-page .form-container {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  color: #333;
+}
+
+body.consult-page .form-container h2 {
+  margin-bottom: 25px;
+  color: #8a2387;
+}
+
+body.consult-page input,
+body.consult-page textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+body.consult-page input:focus,
+body.consult-page textarea:focus {
+  border-color: #8a2387;
+  outline: none;
+}
+
+body.consult-page button.btn-primary {
+  background: #8a2387;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+body.consult-page button.btn-primary:hover {
+  background: #e94057;
+}
+
+@media (max-width: 600px) {
+  body.consult-page .form-container {
+    padding: 30px 20px;
+  }
+
+  body.consult-page button.btn-primary {
+    width: 100%;
+  }
+}
