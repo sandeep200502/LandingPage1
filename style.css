@@ -106,23 +106,38 @@ nav a {
 
 /* Our Services Section */
 .our-services {
-  background: url('images/services-bg.jpg') center/cover no-repeat; /* Add background image */
+  background: url('images/services-bg.jpg') center/cover no-repeat; /* Background image */
   background-size: cover;
   color: #fff;
   padding: 80px 20px;
   text-align: center;
+  position: relative;
+}
+
+.our-services .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay to improve text visibility */
+  z-index: 1;
 }
 
 .our-services h1 {
   font-size: 3rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Adding a shadow to the heading for better readability */
+  z-index: 2;
+  position: relative;
 }
 
 .our-services p {
   font-size: 1.2rem;
   margin-bottom: 30px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Shadow for paragraph */
+  z-index: 2;
+  position: relative;
 }
 
 /* Features */
