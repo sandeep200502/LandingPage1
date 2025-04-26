@@ -141,3 +141,63 @@ input, textarea {
 button {
   margin-top: 20px;
 }
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Loader Spinner */
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #8a2387;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 30px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #ddd;
+}
+
+body.dark header {
+  background: #333;
+}
+
+body.dark footer {
+  background: #111;
+}
+
+body.dark nav a, body.dark .logo, body.dark .consult-btn {
+  color: #fff;
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.dark-mode-toggle button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
