@@ -333,7 +333,7 @@ body.dark nav a, body.dark .logo, body.dark .consult-btn {
   cursor: pointer;
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .features, .service-cards {
     flex-direction: column;
@@ -357,4 +357,9 @@ body.dark nav a, body.dark .logo, body.dark .consult-btn {
   .hero-text h1 {
     font-size: 36px;
   }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
 }
+
