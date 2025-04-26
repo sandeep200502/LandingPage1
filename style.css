@@ -52,9 +52,10 @@ nav a {
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 700;
-  border-radius: 25px;
+  border-radius: 30px;  /* Rounded rectangle */
   position: fixed;
   z-index: 999;
+  transition: background-color 0.3s ease;
 }
 
 .back-to-home.top-left {
@@ -65,6 +66,10 @@ nav a {
 .back-to-home.bottom-left {
   bottom: 20px;
   left: 20px;
+}
+
+.back-to-home:hover {
+  background-color: #e94057; /* Lighten the color on hover */
 }
 
 /* Hero */
@@ -80,7 +85,7 @@ nav a {
 }
 
 .hero-text {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);  /* Dark background for better contrast */
   padding: 20px;
   border-radius: 12px;
 }
@@ -102,6 +107,27 @@ nav a {
   border-radius: 30px;
   text-decoration: none;
   font-weight: 700;
+}
+
+/* Our Services Section */
+.our-services {
+  background: url('images/services-bg.jpg') center/cover no-repeat; /* Add background image */
+  background-size: cover;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.our-services h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Adding a shadow to the heading for better readability */
+}
+
+.our-services p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Shadow for paragraph */
 }
 
 /* Features */
