@@ -6,8 +6,98 @@
   <title>Request a Consultation</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f27121, #e94057, #8a2387);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .back-to-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #fff;
+      color: #8a2387;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-to-home:hover {
+      background: #f3f3f3;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      color: #333;
+    }
+
+    .form-container h2 {
+      margin-bottom: 25px;
+      color: #8a2387;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #8a2387;
+      outline: none;
+    }
+
+    button.btn-primary {
+      background: #8a2387;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button.btn-primary:hover {
+      background: #e94057;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 30px 20px;
+      }
+
+      button.btn-primary {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <a href="index.html" class="back-to-home">← Back to Home</a>
 
   <div class="form-container">
     <h2>Request a Consultation</h2>
@@ -15,7 +105,7 @@
       <input type="text" id="name" placeholder="Full Name" required>
       <input type="email" id="email" placeholder="Email ID" required>
       <input type="tel" id="phone" placeholder="Contact Number" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
       <button type="submit" class="btn-primary">Send Message</button>
     </form>
   </div>
