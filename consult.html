@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request a consultation for personalized services. Contact us easily through this simple and stylish form.">
   <title>Request a Consultation</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -46,6 +47,7 @@
       width: 100%;
       text-align: center;
       color: #333;
+      animation: fadeUp 0.8s ease;
     }
 
     .form-container h2 {
@@ -77,11 +79,12 @@
       font-weight: 600;
       font-size: 16px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
 
     button.btn-primary:hover {
       background: #e94057;
+      transform: scale(1.05);
     }
 
     @media (max-width: 600px) {
@@ -93,19 +96,30 @@
         width: 100%;
       }
     }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
 
-  <a href="index.html" class="back-to-home">← Back to Home</a>
+  <a href="index.html" class="back-to-home" aria-label="Back to Home">← Back to Home</a>
 
   <div class="form-container">
     <h2>Request a Consultation</h2>
     <form id="consultForm">
-      <input type="text" id="name" placeholder="Full Name" required>
-      <input type="email" id="email" placeholder="Email ID" required>
-      <input type="tel" id="phone" placeholder="Contact Number" required>
-      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <input type="text" id="name" placeholder="Full Name" required aria-label="Full Name">
+      <input type="email" id="email" placeholder="Email ID" required aria-label="Email ID">
+      <input type="tel" id="phone" placeholder="Contact Number" required aria-label="Contact Number">
+      <textarea id="message" placeholder="Your Message" rows="5" required aria-label="Your Message"></textarea>
       <button type="submit" class="btn-primary">Send Message</button>
     </form>
   </div>
