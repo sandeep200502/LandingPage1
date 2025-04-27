@@ -79,14 +79,6 @@ nav a {
 }
 
 /* Hero */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
-  z-index: 0;
-}
-
 .hero {
   background-image: url('images/hero-bg.jpg');
   background-size: cover;
@@ -96,12 +88,21 @@ nav a {
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative; /* Make sure the hero section is positioned for absolute child elements */
+}
+
+/* Gradient Overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0; /* This makes the overlay cover the entire section */
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)); /* Gradient effect */
+  z-index: 0; /* Keep the overlay behind the text */
 }
 
 .hero-text {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 12px;
+  position: relative; /* Make sure text is above the overlay */
+  z-index: 1; /* Text content should be above the gradient overlay */
 }
 
 .hero-text h1 {
