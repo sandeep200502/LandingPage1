@@ -22,7 +22,7 @@
       <nav>
         <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
-        <a href="services.html">Services</a>
+        <a href="#services" class="services-link">Services</a> <!-- Changed to link to services section -->
         <a href="testimonials.html">Testimonials</a>
         <a href="contact.html">Contact</a>
         <a href="buy.html">Buy Now</a>
@@ -60,20 +60,29 @@
     <img src="images/about.jpg" alt="About Us">
   </section>
 
-  <section class="services" data-aos="fade-up">
-    <h2>Our Services</h2>
-    <div class="service-cards">
-      <div class="card" data-aos="flip-left">
-        <img src="images/user-experience.jpg" alt="User Experience">
-        <h4>User Experience</h4>
+  <!-- Integrated Services Section -->
+  <section id="services" class="services-section" data-aos="fade-up">
+    <h2 class="section-title">Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card" data-aos="fade-up">
+        <img src="images/user-experience.jpg" alt="UI/UX Design">
+        <h3>UI/UX Design</h3>
+        <p>Crafting beautiful, intuitive interfaces that users love.</p>
       </div>
-      <div class="card" data-aos="flip-up">
-        <img src="images/creative-design.jpg" alt="Creative Design">
-        <h4>Creative Design</h4>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/creative-design.jpg" alt="Creative Solutions">
+        <h3>Creative Solutions</h3>
+        <p>Innovative ideas tailored to your brand identity and mission.</p>
       </div>
-      <div class="card" data-aos="flip-right">
-        <img src="images/retina-ready.jpg" alt="Retina Ready">
-        <h4>Retina Ready</h4>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/retina-ready.jpg" alt="High-Res Output">
+        <h3>High-Res Output</h3>
+        <p>Crystal-clear visuals optimized for all screen sizes and devices.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/support.jpg" alt="24/7 Support">
+        <h3>24/7 Support</h3>
+        <p>Round-the-clock expert assistance to help you succeed anytime.</p>
       </div>
     </div>
   </section>
@@ -91,6 +100,15 @@
     AOS.init({
       duration: 1000,
       once: true
+    });
+
+    // Smooth scrolling for Services link
+    const serviceLink = document.querySelector('.services-link');
+    serviceLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('services').scrollIntoView({
+        behavior: 'smooth'
+      });
     });
   </script>
 
