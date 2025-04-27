@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - MySite</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">MySite</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="buy.html" class="buy-button">Buy Now</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-banner" style="background-image: url('images/contact-bg.jpg');">
+  <div class="banner-content" data-aos="zoom-in">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you!</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container">
+    <form class="contact-form" id="contactForm" data-aos="fade-up">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Contact Number" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 MySite. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+<script>
+  AOS.init();
+  
+  // Simple form submission simulation
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("Thank you! Your message has been sent successfully!");
+    window.location.href = "index.html"; // Redirect back to home
+  });
+</script>
+
+</body>
+</html>
