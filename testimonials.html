@@ -89,19 +89,19 @@
     .testimonial-section {
       padding: 60px 20px;
       text-align: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
     }
 
     .testimonial-card {
       background: #fff;
       padding: 30px;
-      margin: 20px;
       border-radius: 8px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease-in-out;
-      width: 100%;
-      max-width: 300px;
-      margin-left: auto;
-      margin-right: auto;
+      text-align: center;
     }
 
     .testimonial-card img {
@@ -125,7 +125,7 @@
       margin-top: 10px;
     }
 
-    .testimonial-section .testimonial-card:hover {
+    .testimonial-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
     }
@@ -157,15 +157,16 @@
       background-color: #0056b3;
     }
 
-    @media screen and (min-width: 768px) {
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
       .testimonial-section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        grid-template-columns: 1fr 1fr;
       }
+    }
 
-      .testimonial-card {
-        margin: 20px;
+    @media screen and (max-width: 480px) {
+      .testimonial-section {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -194,37 +195,34 @@
 </section>
 
 <section class="testimonial-section">
-  <div class="container">
-    <!-- Testimonial Cards for Each Team Member -->
-    <div class="testimonial-card" data-aos="fade-right">
-      <img src="images/jane.jpg" alt="Jane Doe">
-      <p>"Absolutely wonderful service! The team was incredibly responsive and attentive to our needs."</p>
-      <h4>- Jane Doe, Lead Designer</h4>
-    </div>
-    
-    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-      <img src="images/john.jpg" alt="John Smith">
-      <p>"Our project was executed to perfection. Very professional team and fantastic end results."</p>
-      <h4>- John Smith, Web Developer</h4>
-    </div>
+  <div class="testimonial-card" data-aos="fade-right">
+    <img src="images/jane.jpg" alt="Jane Doe">
+    <p>"Absolutely wonderful service! The team was incredibly responsive and attentive to our needs."</p>
+    <h4>- Jane Doe, Lead Designer</h4>
+  </div>
+  
+  <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+    <img src="images/john.jpg" alt="John Smith">
+    <p>"Our project was executed to perfection. Very professional team and fantastic end results."</p>
+    <h4>- John Smith, Web Developer</h4>
+  </div>
 
-    <div class="testimonial-card" data-aos="fade-left" data-aos-delay="200">
-      <img src="images/sarah.jpg" alt="Sarah Lee">
-      <p>"The team really understood our needs and gave us outstanding results. Very happy with the outcome."</p>
-      <h4>- Sarah Lee, Marketing Strategist</h4>
-    </div>
-    
-    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-      <img src="images/mark.jpg" alt="Mark Johnson">
-      <p>"The collaboration was smooth and the final product exceeded our expectations!"</p>
-      <h4>- Mark Johnson, Client</h4>
-    </div>
+  <div class="testimonial-card" data-aos="fade-left" data-aos-delay="200">
+    <img src="images/sarah.jpg" alt="Sarah Lee">
+    <p>"The team really understood our needs and gave us outstanding results. Very happy with the outcome."</p>
+    <h4>- Sarah Lee, Marketing Strategist</h4>
+  </div>
+  
+  <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+    <img src="images/mark.jpg" alt="Mark Johnson">
+    <p>"The collaboration was smooth and the final product exceeded our expectations!"</p>
+    <h4>- Mark Johnson, Client</h4>
+  </div>
 
-    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
-      <img src="images/emily.jpg" alt="Emily Smith">
-      <p>"Excellent team, amazing creativity, and superb customer support. Highly recommend!"</p>
-      <h4>- Emily Smith, Project Manager</h4>
-    </div>
+  <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+    <img src="images/emily.jpg" alt="Emily Smith">
+    <p>"Excellent team, amazing creativity, and superb customer support. Highly recommend!"</p>
+    <h4>- Emily Smith, Project Manager</h4>
   </div>
 </section>
 
