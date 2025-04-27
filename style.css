@@ -6,9 +6,20 @@ body {
   color: #333;
 }
 
+/* Box Sizing Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Accessibility Focus Styles */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 2px dashed #8a2387;
+  outline-offset: 4px;
 }
 
 header {
@@ -68,6 +79,14 @@ nav a {
 }
 
 /* Hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+  z-index: 0;
+}
+
 .hero {
   background-image: url('images/hero-bg.jpg');
   background-size: cover;
@@ -325,6 +344,12 @@ input, textarea {
   border-radius: 12px;
 }
 
+/* Accessibility Focus Styles */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 2px dashed #8a2387;
+  outline-offset: 4px;
+}
+
 button {
   margin-top: 20px;
   background: #8a2387;
@@ -333,6 +358,17 @@ button {
   border: none;
   border-radius: 20px;
   cursor: pointer;
+}
+
+button:hover, .btn-primary:hover, .consult-btn:hover, .buy-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Accessibility Focus Styles */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 2px dashed #8a2387;
+  outline-offset: 4px;
 }
 
 /* Animations */
