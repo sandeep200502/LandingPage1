@@ -4,9 +4,171 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Testimonials - MySite</title>
+  
+  <!-- Linking External Styles -->
   <link href="style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #007bff;
+      padding: 20px;
+      color: white;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    nav .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    nav .nav-links li {
+      font-size: 1rem;
+    }
+
+    nav .nav-links a {
+      text-decoration: none;
+      color: white;
+      padding: 8px 12px;
+      transition: all 0.3s ease;
+    }
+
+    nav .nav-links a:hover {
+      background-color: #0056b3;
+      border-radius: 5px;
+    }
+
+    nav .buy-button {
+      background-color: #ff5722;
+      border-radius: 5px;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    nav .buy-button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Page Banner */
+    .page-banner {
+      background-size: cover;
+      background-position: center;
+      padding: 80px 0;
+      text-align: center;
+      color: white;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .page-banner .banner-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .page-banner .banner-content p {
+      font-size: 1.3rem;
+    }
+
+    /* Testimonial Section */
+    .testimonial-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      padding: 30px;
+      margin: 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .testimonial-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #007bff;
+    }
+
+    .testimonial-card p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .testimonial-card h4 {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #007bff;
+      margin-top: 10px;
+    }
+
+    .testimonial-section .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    footer {
+      padding: 30px 20px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    .back-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .back-btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media screen and (min-width: 768px) {
+      .testimonial-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .testimonial-card {
+        margin: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -33,30 +195,35 @@
 
 <section class="testimonial-section">
   <div class="container">
+    <!-- Testimonial Cards for Each Team Member -->
     <div class="testimonial-card" data-aos="fade-right">
-      <img src="images/sarah.jpg" alt="Sarah Williams">
-      <p>"Outstanding service and creativity. Highly recommend!"</p>
-      <h4>- Sarah Williams</h4>
+      <img src="images/jane.jpg" alt="Jane Doe">
+      <p>"Absolutely wonderful service! The team was incredibly responsive and attentive to our needs."</p>
+      <h4>- Jane Doe, Lead Designer</h4>
     </div>
+    
     <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-      <img src="images/john.jpg" alt="John Carter">
-      <p>"They understood our brand perfectly and delivered amazing results."</p>
-      <h4>- John Carter</h4>
+      <img src="images/john.jpg" alt="John Smith">
+      <p>"Our project was executed to perfection. Very professional team and fantastic end results."</p>
+      <h4>- John Smith, Web Developer</h4>
     </div>
+
     <div class="testimonial-card" data-aos="fade-left" data-aos-delay="200">
-      <img src="images/priya.jpg" alt="Priya Kumar">
-      <p>"Incredible team! Always exceeded our expectations."</p>
-      <h4>- Priya Kumar</h4>
+      <img src="images/sarah.jpg" alt="Sarah Lee">
+      <p>"The team really understood our needs and gave us outstanding results. Very happy with the outcome."</p>
+      <h4>- Sarah Lee, Marketing Strategist</h4>
     </div>
+    
     <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
       <img src="images/mark.jpg" alt="Mark Johnson">
-      <p>"Professional, fast and efficient. Great collaboration experience."</p>
-      <h4>- Mark Johnson</h4>
+      <p>"The collaboration was smooth and the final product exceeded our expectations!"</p>
+      <h4>- Mark Johnson, Client</h4>
     </div>
+
     <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
       <img src="images/emily.jpg" alt="Emily Smith">
-      <p>"They bring creative visions to life in a stunning way."</p>
-      <h4>- Emily Smith</h4>
+      <p>"Excellent team, amazing creativity, and superb customer support. Highly recommend!"</p>
+      <h4>- Emily Smith, Project Manager</h4>
     </div>
   </div>
 </section>
@@ -65,10 +232,17 @@
   <p>© 2025 MySite. All rights reserved.</p>
 </footer>
 
+<!-- Back Button -->
+<a href="javascript:history.back()" class="back-btn">Back</a>
+
+<!-- AOS Library JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
 </script>
 
 </body>
