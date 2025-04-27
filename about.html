@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Us - MySite</title>
+  <title>Testimonials - MySite</title>
   
   <!-- Linking External Styles -->
   <link href="style.css" rel="stylesheet">
@@ -85,70 +85,49 @@
       font-size: 1.3rem;
     }
 
-    /* About Section */
-    .about-section {
+    /* Testimonial Section */
+    .testimonial-section {
       padding: 60px 20px;
-      background-color: #fff;
-      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
       text-align: center;
-      max-width: 1200px;
-      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      padding: 30px;
+      margin: 20px;
       border-radius: 8px;
-      margin-top: -100px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .about-section h2 {
-      font-size: 2.5rem;
+    .testimonial-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
       margin-bottom: 20px;
-      color: #007bff;
+      border: 3px solid #007bff;
     }
 
-    .about-section p {
+    .testimonial-card p {
       font-size: 1.1rem;
       line-height: 1.8;
       color: #555;
-      margin-bottom: 20px;
     }
 
-    .about-section a {
-      text-decoration: none;
+    .testimonial-card h4 {
+      font-weight: 700;
+      font-size: 1.3rem;
       color: #007bff;
-      font-weight: 500;
+      margin-top: 10px;
     }
 
-    .about-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .about-content .about-item {
-      width: 48%;
-      background: #f0f0f0;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .about-content .about-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    .about-content .about-item h3 {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
-      color: #007bff;
-    }
-
-    .about-content .about-item p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #555;
+    .testimonial-section .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
     }
 
     footer {
@@ -162,7 +141,6 @@
       font-size: 1rem;
     }
 
-    /* Back Button */
     .back-btn {
       position: fixed;
       bottom: 20px;
@@ -179,10 +157,15 @@
       background-color: #0056b3;
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .about-content .about-item {
-        width: 100%;
+    @media screen and (min-width: 768px) {
+      .testimonial-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .testimonial-card {
+        margin: 20px;
       }
     }
   </style>
@@ -203,30 +186,44 @@
   </nav>
 </header>
 
-<section class="page-banner" style="background-image: url('images/about-banner.jpg');">
+<section class="page-banner" style="background-image: url('images/testimonial1.jpg');">
   <div class="banner-content" data-aos="zoom-in">
-    <h1>About Us</h1>
-    <p>Who We Are & What We Do</p>
+    <h1>Testimonials</h1>
+    <p>What Our Clients Say</p>
   </div>
 </section>
 
-<section class="about-section">
-  <h2>Welcome to MySite</h2>
-  <p>We are a creative agency dedicated to helping businesses transform their ideas into innovative digital experiences. Our team is passionate about design, technology, and delivering results that exceed expectations.</p>
-  <p>From concept to execution, we provide tailored solutions in UI/UX design, web development, and digital marketing to build a strong online presence for startups and enterprises alike.</p>
-  <a href="about.html">Read More →</a>
-  
-  <div class="about-content">
-    <div class="about-item" data-aos="fade-right">
-      <img src="images/teamwork.jpg" alt="Teamwork">
-      <h3>Our Team</h3>
-      <p>We believe in collaboration and creativity. Our team is made up of designers, developers, and strategists who work together to bring your vision to life.</p>
+<section class="testimonial-section">
+  <div class="container">
+    <!-- Testimonial Cards for Each Team Member -->
+    <div class="testimonial-card" data-aos="fade-right">
+      <img src="images/jane.jpg" alt="Jane Doe">
+      <p>"Absolutely wonderful service! The team was incredibly responsive and attentive to our needs."</p>
+      <h4>- Jane Doe, Lead Designer</h4>
     </div>
     
-    <div class="about-item" data-aos="fade-left">
-      <img src="images/mission.jpg" alt="Mission">
-      <h3>Our Mission</h3>
-      <p>Our mission is to help businesses grow and thrive by providing top-notch digital solutions that are both functional and creative.</p>
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+      <img src="images/john.jpg" alt="John Smith">
+      <p>"Our project was executed to perfection. Very professional team and fantastic end results."</p>
+      <h4>- John Smith, Web Developer</h4>
+    </div>
+
+    <div class="testimonial-card" data-aos="fade-left" data-aos-delay="200">
+      <img src="images/sarah.jpg" alt="Sarah Lee">
+      <p>"The team really understood our needs and gave us outstanding results. Very happy with the outcome."</p>
+      <h4>- Sarah Lee, Marketing Strategist</h4>
+    </div>
+    
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+      <img src="images/mark.jpg" alt="Mark Johnson">
+      <p>"The collaboration was smooth and the final product exceeded our expectations!"</p>
+      <h4>- Mark Johnson, Client</h4>
+    </div>
+
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+      <img src="images/emily.jpg" alt="Emily Smith">
+      <p>"Excellent team, amazing creativity, and superb customer support. Highly recommend!"</p>
+      <h4>- Emily Smith, Project Manager</h4>
     </div>
   </div>
 </section>
@@ -235,11 +232,12 @@
   <p>© 2025 MySite. All rights reserved.</p>
 </footer>
 
-<!-- Back to Home Button (Bottom Left) -->
-<a href="index.html" class="back-to-home bottom-left">Back to Home</a>
+<!-- Back Button -->
+<a href="javascript:history.back()" class="back-btn">Back</a>
 
 <!-- AOS Library JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
 <script>
   AOS.init({
     duration: 1000,
