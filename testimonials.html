@@ -2,90 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Testimonials</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-    .testimonial-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-    }
-    .testimonial {
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin: 10px;
-      padding: 20px;
-      width: 300px;
-      text-align: center;
-    }
-    .testimonial img {
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      margin-bottom: 15px;
-    }
-    .testimonial h3 {
-      color: #003366;
-      margin: 10px 0;
-    }
-    .testimonial p {
-      font-style: italic;
-      color: #666;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testimonials - MySite</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <h1>What Our Clients Say</h1>
-  </header>
+<header>
+  <nav>
+    <div class="logo">MySite</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="buy.html" class="buy-button">Buy Now</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <section class="testimonial-container">
-    <div class="testimonial">
-      <img src="client1.jpg" alt="Client 1">
-      <h3>John Doe</h3>
-      <p>"Ondex's solutions have transformed our business operations. Highly recommend!"</p>
-    </div>
-    <div class="testimonial">
-      <img src="client2.jpg" alt="Client 2">
-      <h3>Jane Smith</h3>
-      <p>"Exceptional quality and service. A trusted partner in our projects."</p>
-    </div>
-    <div class="testimonial">
-      <img src="client3.jpg" alt="Client 3">
-      <h3>Michael Johnson</h3>
-      <p>"Reliable and innovative. Ondex consistently delivers outstanding results."</p>
-    </div>
-  </section>
+<section class="page-banner" style="background-image: url('images/testimonial1.jpg');">
+  <div class="banner-content" data-aos="zoom-in">
+    <h1>Testimonials</h1>
+    <p>What Our Clients Say</p>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Ondex. All rights reserved.</p>
-  </footer>
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-card" data-aos="fade-up">
+      <p>"Outstanding service and creativity. Highly recommend!"</p>
+      <h4>- Sarah Williams</h4>
+    </div>
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+      <p>"They understood our brand perfectly and delivered amazing results."</p>
+      <h4>- John Carter</h4>
+    </div>
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+      <p>"Incredible team! Always exceeded our expectations."</p>
+      <h4>- Priya Kumar</h4>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 MySite. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
