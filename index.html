@@ -22,7 +22,7 @@
       <nav>
         <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
-        <a href="#services" class="services-link">Services</a> <!-- Changed to link to services section -->
+        <a href="#services" class="services-link">Services</a>
         <a href="testimonials.html">Testimonials</a>
         <a href="contact.html">Contact</a>
         <a href="buy.html">Buy Now</a>
@@ -61,23 +61,82 @@
   </section>
 
   <!-- Blog Preview Section -->
-<section class="blog-preview" data-aos="fade-up">
-  <h2>From Our Blog</h2>
-  <div class="blog-grid">
-    <a href="blog.html" class="blog-card">
-      <img src="images/blog1.jpg" alt="Blog Post 1">
-      <h3>Top 5 UI/UX Trends in 2025</h3>
-    </a>
-    <a href="blog.html" class="blog-card">
-      <img src="images/blog2.jpg" alt="Blog Post 2">
-      <h3>How Creative Design Boosts Conversion</h3>
-    </a>
-    <a href="blog.html" class="blog-card">
-      <img src="images/blog3.jpg" alt="Blog Post 3">
-      <h3>Why Mobile-First Design Still Matters</h3>
-    </a>
-  </div>
-</section>
+  <section class="blog-preview" data-aos="fade-up">
+    <h2>From Our Blog</h2>
+
+    <div class="post" data-aos="fade-up">
+      <a href="blog.html" style="display: flex; flex-wrap: wrap; gap: 20px; text-decoration: none; color: inherit;">
+        <img src="images/blog1.jpeg" alt="Trends in Digital Marketing" style="width: 100%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px;">
+        <div class="post-content" style="flex: 1;">
+          <h3>Top 5 Digital Marketing Trends to Watch in 2025</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="post" data-aos="fade-up" data-aos-delay="100">
+      <a href="blog.html" style="display: flex; flex-wrap: wrap; gap: 20px; text-decoration: none; color: inherit;">
+        <img src="images/blog2.jpeg" alt="Creative Web Design" style="width: 100%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px;">
+        <div class="post-content" style="flex: 1;">
+          <h3>Creative Web Design: What Works in 2025?</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="post" data-aos="fade-up" data-aos-delay="200">
+      <a href="blog.html" style="display: flex; flex-wrap: wrap; gap: 20px; text-decoration: none; color: inherit;">
+        <img src="images/blog3.jpeg" alt="Startup Strategies" style="width: 100%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px;">
+        <div class="post-content" style="flex: 1;">
+          <h3>Startup Success: 10 Strategies You Shouldn't Ignore</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="post" data-aos="fade-up">
+      <a href="blog.html" style="display: flex; flex-wrap: wrap; gap: 20px; text-decoration: none; color: inherit;">
+        <img src="images/ai-personalization.jpg" alt="AI-Powered Personalization" style="width: 100%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px;">
+        <div class="post-content" style="flex: 1;">
+          <h3>AI-Powered Personalization in Marketing</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="post" data-aos="fade-up" data-aos-delay="100">
+      <a href="blog.html" style="display: flex; flex-wrap: wrap; gap: 20px; text-decoration: none; color: inherit;">
+        <img src="images/voice-search.jpg" alt="Voice Search Optimization" style="width: 100%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px;">
+        <div class="post-content" style="flex: 1;">
+          <h3>How to Optimize Your Website for Voice Search</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="post" data-aos="fade-up" data-aos-delay="200">
+      <a href="blog.html" style="display: flex; flex-wrap: wrap; gap: 20px; text-decoration: none; color: inherit;">
+        <img src="images/ar-ecommerce.jpg" alt="AR in E-Commerce" style="width: 100%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px;">
+        <div class="post-content" style="flex: 1;">
+          <h3>Augmented Reality is Reshaping Online Shopping</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="post" data-aos="fade-up" data-aos-delay="300">
+      <a href="blog.html" style="display: flex; flex-wrap: wrap; gap: 20px; text-decoration: none; color: inherit;">
+        <img src="images/sustainable-marketing.jpg" alt="Sustainable Marketing" style="width: 100%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px;">
+        <div class="post-content" style="flex: 1;">
+          <h3>Sustainable Marketing: Aligning Purpose with Profit</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="post" data-aos="fade-up" data-aos-delay="400">
+      <a href="blog.html" style="display: flex; flex-wrap: wrap; gap: 20px; text-decoration: none; color: inherit;">
+        <img src="images/micro-influencers.jpg" alt="Micro-Influencer Marketing" style="width: 100%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 8px;">
+        <div class="post-content" style="flex: 1;">
+          <h3>Micro-Influencers: The Secret Weapon of 2025</h3>
+        </div>
+      </a>
+    </div>
+
+  </section>
 
   <!-- Integrated Services Section -->
   <section id="services" class="services-section" data-aos="fade-up">
@@ -121,13 +180,10 @@
       once: true
     });
 
-    // Smooth scrolling for Services link
-    const serviceLink = document.querySelector('.services-link');
-    serviceLink.addEventListener('click', (e) => {
+    // Smooth scroll to services
+    document.querySelector('.services-link').addEventListener('click', function(e) {
       e.preventDefault();
-      document.getElementById('services').scrollIntoView({
-        behavior: 'smooth'
-      });
+      document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
     });
   </script>
 
