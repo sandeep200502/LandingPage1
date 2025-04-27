@@ -4,6 +4,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #f9f9f9;
   color: #333;
+  position: relative; /* Added to fix overlay issue */
 }
 
 /* Box Sizing Reset */
@@ -89,20 +90,21 @@ nav a {
   color: white;
   padding: 100px 20px;
   text-align: center;
+  position: relative; /* Added to fix overlay */
 }
 
 /* Gradient Overlay */
 .hero::before {
   content: '';
   position: absolute;
-  inset: 0; /* This makes the overlay cover the entire section */
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)); /* Gradient effect */
-  z-index: 0; /* Keep the overlay behind the text */
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+  z-index: 0;
 }
 
 .hero-text {
-  position: relative; /* Make sure text is above the overlay */
-  z-index: 1; /* Text content should be above the gradient overlay */
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text h1 {
@@ -216,8 +218,9 @@ nav a {
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
-  color: black; /* Updated from white to black */
+  color: black;
   text-align: center;
+  position: relative; /* Added */
 }
 
 .page-banner .banner-content h1,
@@ -345,12 +348,6 @@ input, textarea {
   border-radius: 12px;
 }
 
-/* Accessibility Focus Styles */
-a:focus, button:focus, input:focus, textarea:focus {
-  outline: 2px dashed #8a2387;
-  outline-offset: 4px;
-}
-
 button {
   margin-top: 20px;
   background: #8a2387;
@@ -366,12 +363,6 @@ button:hover, .btn-primary:hover, .consult-btn:hover, .buy-button:hover {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Accessibility Focus Styles */
-a:focus, button:focus, input:focus, textarea:focus {
-  outline: 2px dashed #8a2387;
-  outline-offset: 4px;
-}
-
 /* Animations */
 .fade-in {
   opacity: 0;
@@ -384,9 +375,6 @@ a:focus, button:focus, input:focus, textarea:focus {
   transform: translateY(0);
 }
 
-/* AOS animations are handled by the library */
-
-/* Loader Spinner */
 .loader {
   border: 8px solid #f3f3f3;
   border-top: 8px solid #8a2387;
@@ -433,7 +421,6 @@ body.dark nav a, body.dark .logo, body.dark .consult-btn {
   cursor: pointer;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .features, .service-cards {
     flex-direction: column;
@@ -513,8 +500,8 @@ body.consult-page .form-container h2 {
 
 body.consult-page input,
 body.consult-page textarea {
-  width: 100%;               /* Full width of the form container */
-  max-width: 500px;          /* Limit width so it looks neat */
+  width: 100%;
+  max-width: 500px;
   margin: 10px auto;
   padding: 12px 16px;
   border: 2px solid #ccc;
