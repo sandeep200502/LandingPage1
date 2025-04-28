@@ -36,7 +36,7 @@ Easy to customize and deploy
 🔗 Live Demo
 
 👉 Live Demo Link
-https://sandeep200502.github.io/LandingPage1/blog.html
+https://sandeep200502.github.io/LandingPage1/index.html
 
 
 📜 Technologies Used
