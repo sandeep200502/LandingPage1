@@ -24,7 +24,7 @@ Easy to customize and deploy
 <img width="1498" alt="Screenshot 2025-04-28 at 17 44 34" src="https://github.com/user-attachments/assets/e8ef5deb-0c8d-4a3b-995d-898f50a59dae" />
 
 3.Services Page
-<img width="1497" alt="Screenshot 2025-04-28 at 17 37 20" src="https://github.com/user-attachments/assets/fd4044f9-8771-493a-b0cd-bd16ff4b375f" />
+<img width="1497" alt="Screenshot 2025-04-28 at 17 38 01" src="https://github.com/user-attachments/assets/148409df-dbba-4d0b-8278-77390cc9e584" />
 
 4.Testimonials Page
 <img width="1496" alt="Screenshot 2025-04-28 at 17 41 19" src="https://github.com/user-attachments/assets/ea2f146e-8f8b-4a2b-8968-5893ac615758" />
